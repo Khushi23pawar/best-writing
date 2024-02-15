@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Best writing</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,200;9..40,300;9..40,400&family=DM+Serif+Display:ital@0;1&family=Roboto:wght@300;400&family=Poppins:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link rel="stylesheet" type="text/css" href="style/responsive.css">
+    <style>
+        .modal-content{
+
+         border: 1px solid #000;
+         text-align: center;
+         background: #000;
+         color: white;
+        }
+        .parsley-errors-list {
+                list-style: none;
+    color: red;
+    text-align: left;
+    padding: 0px;
+
+        }
+        .fullname{
+            text-align: justify;
+        }
+        .input-color{
+        background: #1A1A1E;
+    border: 1px solid #1A1A1E;
+        }
+    </style>
+</head>
+
+<body>
+	<!-- start navbar coading -->
+    <nav class="navbar navbar-expand-lg  navbar-light top-menu fixed-top ">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-slider"><span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- bar and close icon -->
+        <div class="logo-container">
+            <a href="https://bestwriting.com" class="navbar-brand logo-desktop d-none d-md-none d-lg-block
+"><img src="images/bw-logo-primary-long.svg" alt="logo" class="img-fluid logo-img"></a>
+            <a href="https://bestwriting.com" class="navbar-brand logo-mobile d-md-block d-lg-none
+"><img src="images/bw-logo-mark-primary.svg" alt="logo" class="img-fluid logo-img"></a>
+            <button type="button" class="btn sec-font sec-color nav-font d-block d-lg-none sign_up_button">Sign Up </button>
+        </div>
+        <div class="collapse navbar-collapse" id="nav-slider">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a href="job.html" class="nav-link">Jobs</a></li>
+                <li class="nav-item"><a href="membership.html" class="nav-link">Membership</a></li>
+                <li class="nav-item"><a href="newsletter.html" class="nav-link">Newsletter</a></li>
+                <li class="nav-item"><a href="writer.html" class="nav-link">Writes</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
+            </ul>
+        </div>
+        <button type="button" class="btn sec-font sec-color nav-font d-none d-lg-block sign_up_button">Sign Up</button>
+    </nav>
+    <!-- end navbar coading -->
+    <!-- start header coading -->
+    <div class="container-fluid main-con">
+        <div class="row">
+            <div class="col-md-6 main-con-left primary-bg p-0">
+                <div class="main-con-left-inner">
+                    <h1 class="third-font heading-1 ">Find the<br>
+                        Best Writing Job</h1>
+                    <p class="primary-font main-con-left-text">We hand-pick paid writing opportunities, including remote, freelance, contract, part-time, and full-time.</p>
+                    <button class="btn subscribe-btn primary-font">
+                    Subscribe to Jobs Newsletter</button>
+                    <p class="primary-font pt-3 end-para">Get the best writing jobs weekly. Free.</p>
+                </div>
+            </div>
+            <div class="col-md-6 main-con-right p-0">
+                <img src="images/woman-laptop-smiling.jpg" class="img-fluid">
+            </div>
+        </div>
+    </div>
+    <!-- end header coading -->
+    <!-- start section coading -->
+    <div class="container-fluid writing-job-container rightleft_space">
+        <div class="text-center p-5 writing-job-con-inner">
+            <p class="primary-color sec-bg primary-font best-paratext text-center">BEST WRITING JOBS</p>
+            <h2 class="third-font p-4 heading-2">Explore Thousands of Writing Job <br class="d-lg-block d-none">Opportunities</h2>
+            <p class="primary-font pb-3 sec-color writing-para">We source writing jobs from job portals, newsletters, social media, communities <br class="d-lg-block d-none">and selected partners. With personalized filters you can easily find the jobs you <br class="d-lg-block d-none">care about.</p>
+            <button class="primary-bg browser-btn-1"><i class="fa fa-briefcase pr-2"></i>Browser Writing Job<i class="fa fa-long-arrow-right pl-2"></i></button>
+            <button class="primary-color browser-btn-2">Hirirng? Post a Job<i class="fa fa-long-arrow-right pl-2"></i></button>
+        </div>
+        <div class="update-job-container" id="job-template-box"></div>
+        	<script type="text/html" id="job-template">
+        	{{#arr}}
+        	<div class="row align-items-center justify-content-center job-inner-con position-relative">
+                <div class="col-md-1 ">
+                    <div class=" job-img-con">
+                        <img src="{{logo}}" alt="simply business">
+                    </div>
+                </div>
+                <div class="col-md-10 ">
+                    <h5 class="third-font">{{heading}}</h5>
+                    <p class="sec-color mb-0 job-dec"><span class="font-weight-bold">{{typeofjob}}</span>
+                        <span class="px-3">{{timing}}</span>
+                        <span><i class="fa fa-map-marker pr-1"></i>{{location}}</span></p>
+                </div>
+                <div class="col-md-1 today-text-cl" style="position: initial !important;">
+                    <p class="mb-0 text-uppercase primary-color sec-bg primary-font best-paratext job-posting-date">{{posttime}}</p>
+                    <div class="job-extra-btn">
+                        <button class="btn apply-btn"><a style="color:#000" href="{{applylink}}">Apply</a><span class="fa fa-external-link pl-2"></span></button>
+                        <button class="primary-bg browser-btn-1"><a style="color:#fff" href="{{joblink}}">View Job</a></button>
+                    </div>
+                </div>
+            </div>
+            {{/arr}}
+            
+        </script>
+            
+            <!-- end div 1 -->
+    </div>
+    <!-- end section coading -->
+    <!-- stsrt types of jobs section -->
+    <div class="jumbotron bg-white typesof_jobcon rightleft_space">
+        <div class="row">
+            <div class="col-md-4 typesof_innercon">
+                <h5 class="primary-font typesof_heading"><span class="fa fa-pencil-square pr-2"></span>Copywriting Jobs</h5>
+                <p class="job-dec">Explore copywriting opportunities from crafting compelling ad copy to persuasive sales letters.</p>
+                <a href="#" class="primary-color primary-font text-line">Copywriting Jobs <i class="fa fa-long-arrow-right"></i></a>
+            </div>
+            <div class="col-md-4 typesof_innercon">
+                <h5 class="primary-font typesof_heading"><span class="fa fa-calendar-minus pr-2"></span>Marketing Writing Jobs</h5>
+                <p class="job-dec">Browse marketing related jobs from top companies, leading agencies to fast-growing startups.</p>
+                <a href="#" class="primary-color primary-font text-line">Marketing Writing Jobs <i class="fa fa-long-arrow-right"></i></a>
+            </div>
+            <div class="col-md-4 typesof_innercon">
+                <h5 class="primary-font typesof_heading"><span class="fa fa-compass pr-2"></span>Technical Writing Jobs</h5>
+                <p class="job-dec">Discover technical writing opportunities from technical report writing to user manuals.</p>
+                <a href="#" class="primary-color primary-font text-line">Marketing Writing Jobs <i class="fa fa-long-arrow-right"></i></a>
+            </div>
+            <div class="col-md-4 typesof_innercon">
+                <h5 class="primary-font typesof_heading"><span class="fa fa-globe pr-2"></span>Remote Writing Jobs</h5>
+                <p class="job-dec">Remote writing jobs for freelancers and full-time positions available to writers from anywhere.</p>
+                <a href="#" class="primary-color primary-font text-line">Remote Writing Jobs <i class="fa fa-long-arrow-right"></i></a>
+            </div>
+            <div class="col-md-4 typesof_innercon">
+                <h5 class="primary-font typesof_heading"><span class="fa fa fa-check-circle pr-2"></span>Freelance Writing Jobs</h5>
+                <p class="job-dec">Explore freelance writing jobs, long-term projects and quick gigs in various industries</p>
+                <a href="#" class="primary-color primary-font text-line">Freelance Writing Jobs <i class="fa fa-long-arrow-right"></i></a>
+            </div>
+            <div class="col-md-4 typesof_innercon">
+                <h5 class="primary-font typesof_heading"><span class="fa fa-briefcase pr-2"></span>Full-Time Writing Jobs</h5>
+                <p class="job-dec">Advance your career with full-time writing jobs at leading companies, media outlets, and publishers.</p>
+                <a href="#" class="primary-color primary-font text-line">Full-Time Writing Jobs <i class="fa fa-long-arrow-right"></i></a>
+            </div>
+            <button class="primary-bg browser-btn-1 btn-2"><i class="fa fa-briefcase pr-2"></i>Browser Writing Job<i class="fa fa-long-arrow-right pl-2"></i></button>
+        </div>
+    </div>
+    <!-- end types of jobs section -->
+    <!-- start protfolio coading -->
+    <div class="jumbotron bg-white protfolio">
+        <div class="row primary-bg protfolio_con">
+            <div class="col-lg-6 main-con-left primary-bg p-0">
+                <div class="main-con-left-inner protfolio-content">
+                    <p class="primary-color sec-bg primary-font best-paratext text-center">BEST WRITING PROTFOLIO</p>
+                    <h1 class="third-font heading-2 pt-4">Showcase Your Best Writing <br> With a Beautiful Portfolio</h1>
+                    <p class="primary-font main-con-left-text">No more sending doc files to showcase your writing examples. Attract more clients with a beautiful free writer profile and portfolio.</p>
+                    <hr style="border-top-color:lightgray" class="pb-3">
+                    <p><span class="fa fa-cloud-upload pr-2"></span><b>Work Your Way.</b> List your work experience, preferred locations, job types and rates.</p><br>
+                    <p><span class="fa fa-lock pr-2"></span><b>Show Yourself. </b>Introduce yourself, choose skills and topics you write about, and list your best writing examples.</p><br>
+                    <p><span class="fa fa-user pr-2"></span><b>Get Hired.</b> Your portfolio has a direct hire button that links to your email or contact form.</p>
+                    <button class="btn subscribe-btn primary-font">Create Your Free Profile</button>
+                </div>
+            </div>
+            <div class="col-lg-6 protfolio-img-con">
+                <img src="images/best-writing-writer-profile.jpg" alt="writer protfolio" class="img-fluid protfolio-img">
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- end protfolio coading -->
+    <!-- start discover coading -->
+    <div class="jumbotron jumbotron-fluid discover-jumbo bg-light ">
+        <div class="container-fluid writing-job-container rightleft_space">
+            <div class="text-center p-sm-5 p-3 pb-5">
+                <p class="primary-color sec-bg primary-font best-paratext text-center">BROWSE COMPANY PROFILES AND OPEN POSITIONS</p>
+                <h2 class="third-font p-4 heading-2">Discover Top Hiring Companies</h2>
+                <p class="primary-font pb-3 sec-color writing-para">Discover leading companies hiring talented writers. Our comprehensive <br> database empowers you to discover the ideal opportunity for your career.</p>
+                <button class="primary-bg browser-btn-1"><i class="fa fa-building pr-2"></i>Show Companies<i class="fa fa-long-arrow-right pl-2"></i></button>
+                <button class="primary-color browser-btn-2">Business? Create a Profile<i class="fa fa-long-arrow-right pl-2"></i></button>
+            </div>
+            <div class="row" id="company-logo-template" >
+			<script type="text/html" id="company-logo-inner-template" >
+				{{#arr}}
+            <div class="col-md-2 col-sm-4 col-6 company-col-con">
+                    <div class="company-logo-con">
+                        <div class=" job-img-con company-img-logo">
+                            <img src="{{logo}}" alt="simply business">
+                        </div>
+                        <h6 class="third-font company-heading">{{heading}}</h6>
+                        <p class="text-center">{{text}}</p>
+                    </div>
+                </div>
+                {{/arr}}
+           
+        </script>
+    </div>
+                
+                <div class="row instant-job">
+                    <div class="col-md-4 typesof_innercon mt-5 ">
+                        <h5 class="primary-font typesof_heading"><span class="fa fa-pencil-square pr-2"></span>Instant Job Alerts</h5>
+                        <p class="job-dec">Stay ahead with tailored alerts for the latest writing jobs from top businesses, delivered straight to your<br> inbox.</p>
+                    </div>
+                    <div class="col-md-4 typesof_innercon mt-5">
+                        <h5 class="primary-font typesof_heading"><span class="fa fa-calendar-minus pr-2"></span>Comprehensive Hiring Insights</h5>
+                        <p class="job-dec">Proactively engage with potential employers by accessing their hiring history and fostering meaningful connections.</p>
+                    </div>
+                    <div class="col-md-4 typesof_innercon mt-5">
+                        <h5 class="primary-font typesof_heading"><span class="fa fa-compass pr-2"></span>Streamlined Job Discovery</h5>
+                        <p class="job-dec">Effortlessly explore open positions and submit applications directly through our user-friendly<br> platform</p>
+                    </div>
+                    <button class="primary-bg browser-btn-1 btn-2"><i class="fa fa-briefcase pr-2"></i>Explore Hiring Companies<i class="fa fa-long-arrow-right pl-2"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end discover coading -->
+    <!-- start news letter coading -->
+    <div class="jumbotron rightleft_space bg-white newsletter-jumbo">
+        <div class="container-fluid main-con">
+            <div class="row w-100">
+                <div class="col-md-6 main-con-left p-0">
+                    <div class="main-con-left-inner news-adjust">
+                        <p class="primary-color sec-bg primary-font best-paratext text-center">NEWSLETTER</p>
+                        <h2 class="third-font pt-4 ">Weekly Jobs Newsletter for Writers</h2>
+                        <p class="primary-font main-con-left-text">Every Wednesday, you'll receive a free email with all the latest job postings.</p>
+                        <form>
+                            <div class="form-group input-con">
+                                <input type="email" name="email" class="form-control email-input" placeholder="Your Email" required>
+                                <button type="submit" class="btn primary-bg subscribe-btn primary-font input-btn m-0">Send Me Newsletter</button>
+                            </div>
+                        </form>
+                        <p class=" pt-3 end-para">Join 22,509 newsletter readers!· <b>Let me see it first</b></p>
+                    </div>
+                </div>
+                <div class="col-md-6 main-con-right p-0">
+                    <img src="images/man-holding-iphone-with-newsletter-1.jpg" class="img-fluid newletter-right-image">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end news letter coading -->
+    <!-- start writers coading -->
+    <div class="jumbotron jumbotron-fluid discover-jumbo  main-con-left writer-jumbo">
+        <div class="container-fluid writing-job-container rightleft_space">
+            <div class="text-center ">
+                <p class="primary-color sec-bg primary-font best-paratext text-center">AVAILABLE FOR HIRE IN JANUARY 2024</p>
+                <h2 class="third-font p-4 heading-2">Meet the Best Writers</h2>
+                <p class="primary-font pb-3 sec-color writing-para">Find and hire writers and editors ready to produce blog posts, long-form articles, product<br> descriptions, books, white papers, and more.</p>
+            </div>
+            <div class="row mb-5" id="writer-template">
+            	<script type="text\html" id="writer-template-circle">
+            		{{#arr}}
+                <div class="col-md-2 col-sm-4 col-6 company-col-con">
+                    <div class="company-logo-con writer-con">
+                        <div class=" job-img-con company-img-logo writer-image">
+                            <img src="{{image}}" alt="writer photo">
+                        </div>
+                        <h6 class="third-font company-heading writer-font-color">{{name}}</h6>
+                        <p class="text-center primary-color">{{work}}</p>
+                    </div>
+                </div>
+                {{/arr}}
+            </script>
+        </div>
+                
+            <div class="signup-free-con">
+                <p class="mb-0">Want to get a public approved profile? Sign up and get a free profile.</p><button type="submit" class="btn primary-bg subscribe-btn primary-font input-btn m-0">Sign Up Free</button>
+            </div>
+        </div>
+    </div>
+    <!-- end writers coading -->
+    <!-- start founder letter coading -->
+    <div class="jumbotron jumbotron-fluid discover-jumbo  main-con-left primary-bg ">
+        <div class="container-fluid writing-job-container rightleft_space pt-0">
+            <div class="text-center p-5 pt-0">
+                <p class="primary-color sec-bg primary-font best-paratext text-center">FOUNDERS LETTER</p>
+                <h2 class="third-font p-4 heading-2">Let’s Build Together</h2>
+                <p class="primary-font pb-3  writing-para">Learn more about what we’re building and why you’re such an <br> important part of the journey.</p>
+            </div>
+            <div class="signup-free-con d-block founder-con">
+                <div class="founder-con-inner">
+                    <p>Hey there! 👋</p>
+                    <p>We're Ed and Tom, the founders of Best Writing, and we're on a mission to help writers earn more.</p>
+                    <p>Writing can be hard work, but we believe that anyone can make a living from their craft with the right tools and support.</p>
+                    <p>That's why we're building an
+                        <!-- --> <strong>all-in-one platform connecting writers with businesses</strong> <!-- -->to help you find and work with your dream clients.</p>
+                    <p></p>
+                    <p>Whether you're just starting and looking to make your first $1 from writing, or you're an experienced pro ready to take your career to the next level, Best Writing can help you get there. Our platform gives you access to thousands of high-paying job opportunities and guidance and support from our experienced team.</p>
+                    <p>We've been in the industry for over 15 years. Starting from writing for free to build a portfolio to making $100,000+/year, working with top publications like TIME and Forbes, and consulting tech companies like Adobe, BigCommerce, and Webflow. We've learned a lot along the way and are excited to share our knowledge with you.</p>
+                    <p>But we can't do it alone. We need your help and feedback to make our platform the best for you and the writers worldwide. We're building something truly special here, and we'd love for you to be a part of it.</p>
+                    <p>If you're ready to take your writing career to the next level, join us on this journey. Let's write the next chapter together.</p>
+                </div>
+                <div class="founder-logo-section d-flex align-items-center justify-content-between px-3">
+                    <div class="founder-logo-first-div">
+                        <div class="company-logo-con writer-con d-flex align-items-center justify-content-center flex-row">
+                            <div class=" job-img-con company-img-logo writer-image">
+                                <img src="images/tomas-laurinavicius.png" alt="writer photo">
+                            </div>
+                            <div class=" job-img-con company-img-logo writer-image writer-image-two">
+                                <img src="images/17220323-e95e-40fb-813c-ebf9352a8adf.jpg" alt="writer photo">
+                            </div>
+                            <div class="ml-4">
+                                <h6 class="third-font company-heading writer-font-color">Harry Potter</h6>
+                                <p class="text-center primary-color">content writer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div><img src="images/bw-logo-primary-long.svg" alt="logo" class="img-fluid logo-img founder-logo-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end founder letter coading -->
+    <!-- start writer review -->
+    <div class="jumbotron jumbotron-fluid discover-jumbo   bg-white ">
+        <div class="container-fluid writing-job-container rightleft_space pt-0">
+            <div class="text-center writing-job-inner-con p-5 pt-0">
+                <p class="primary-color sec-bg primary-font best-paratext text-center">TESTIMONIALS</p>
+                <h2 class="third-font p-4 heading-1">Writer Reviews</h2>
+                <p class="primary-font pb-3  primary-color writing-para review-text">Easy to use. Lots of jobs. Fantastic newsletter. Here's what writers <br class="d-none"> from US to New Zealand and all around the globe say about us.</p>
+                <button class="primary-bg browser-btn-1 btn-2 review-btn mt-1"><i class="fa fa-suitcase pr-2"></i>Read More Review<i class="fa fa-long-arrow-right pl-2"></i></button>
+            </div>
+        </div>
+        <div class=" ">
+            <div class="row review-con-inner rightleft_space">
+                <div class="col-md-4 col-sm-6 ">
+                    <div class="review-box">
+                        <p>The well-patronized, user-friendly site has opened up a wealth of writing opportunities around the world for me, and as a Kiwi based Down Under that's something I certainly appreciate. I also appreciate the number of <strong>potentially suitable jobs that show up like clockwork each week</strong>, and also the excellent customer service I've experienced.<br><br>
+                            <strong>Lance Morcan 🇳🇿</strong><br>
+                            Screenwriter, Author, and Freelance Writer from New Zealand
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 ">
+                    <div class="review-box">
+                        <p>As a freelance writer, I've been an avid fan of Best Writing (formerly Content Writer Jobs) for several months now. It's clear, concise, and brings together the very best writing jobs around the world. The newsletter is fantastic and lists so many work opportunities that I would never be able to find on my own. And the blog is also loaded with incredible writing tips and best practices.<br><br>
+                            <strong>Evelina 🇦🇺</strong><br>
+                            Freelance Writer from Brisbane, Australia
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6  ">
+                    <div class="review-box">
+                        <p>Before I found Best Writing, I manually visited job boards and spent too much time wading through an ocean of bad gigs. Now I get an email with a curated list of great gigs that are easy to apply to. Best Writing has made gig-hunting faster, easier, and more promising. I highly recommend this service to other freelance writers!<br><br>
+                            <strong>Salvatore Lamborn</strong><br>
+                            Freelance Writer
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 ">
+                    <div class="review-box">
+                        <p>The well-patronized, user-friendly site has opened up a wealth of writing opportunities around the world for me, and as a Kiwi based Down Under that's something I certainly appreciate. I also appreciate the number of <strong>potentially suitable jobs that show up like clockwork each week</strong>, and also the excellent customer service I've experienced.<br><br>
+                            <strong>Lance Morcan 🇳🇿</strong><br>
+                            Screenwriter, Author, and Freelance Writer from New Zealand
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 ">
+                    <div class="review-box">
+                        <p>Before I found Best Writing, I manually visited job boards and spent too much time wading through an ocean of bad gigs. Now I get an email with a curated list of great gigs that are easy to apply to. Best Writing has made gig-hunting faster, easier, and more promising. I highly recommend this service to other freelance writers!<br><br>
+                            <strong>Salvatore Lamborn</strong><br>
+                            Freelance Writer
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 ">
+                    <div class="review-box">
+                        <p>The well-patronized, user-friendly site has opened up a wealth of writing opportunities around the world for me, and as a Kiwi based Down Under that's something I certainly appreciate. I also appreciate the number of <strong>potentially suitable jobs that show up like clockwork each week</strong>, and also the excellent customer service I've experienced.<br><br>
+                            <strong>Lance Morcan 🇳🇿</strong><br>
+                            Screenwriter, Author, and Freelance Writer from New Zealand
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end writer review -->
+    <!-- start footer coading -->
+    <footer class="jumbotron-fluid discover-jumbo  primary-bg m-0 pt-5">
+        <div class="container-fluid writing-job-container rightleft_space pt-0">
+            <div class="row">
+                <div class="col-12 col-lg-4">
+                    <div><img src="images/bw-logo-white-long.svg" alt="logo" class="img-fluid logo-img founder-logo-img">
+                    </div>
+                    <p class=" footer-size third-color pt-4">Best Writing is an all-in-one platform <br>connecting writers with businesses. Find the best writing jobs in one place and hire writers.</p>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <p class="third-color font-weight-bold">For Writer</p>
+                    <ul class="footer-nav">
+                        <li class="pb-2"><a href="#" class="white-font font-weight-bold primary-font footer-text">Find a Job</a></li>
+                        <li class="pb-2"><a href="#" class="white-font font-weight-bold primary-font footer-text">Weekly Newsletter</a></li>
+                        <li class="pb-2"><a href="#" class="white-font font-weight-bold primary-font footer-text">Writer Membership</a></li>
+                        <li class="pb-2"><a href="#" class="white-font font-weight-bold primary-font footer-text">Writer Application</a></li>
+                        <li class="pb-2"><a href="#" class="white-font font-weight-bold primary-font footer-text">Reviews <span class="new-span primary-font"> NEW </span></a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <p class="third-color font-weight-bold">For Business</p>
+                    <ul class="footer-nav">
+                        <li class="pb-2"><a href="#" class="white-font font-weight-bold primary-font footer-text">Post a Job</a></li>
+                        <li class="pb-2"><a href="#" class="white-font font-weight-bold primary-font footer-text">Find a Writer</a></li>
+                        <li class="pb-2"><a href="#" class="white-font font-weight-bold primary-font footer-text">Sponser Newsletter </a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <p class="third-color font-weight-bold">Resources</p>
+                    <ul class="footer-nav">
+                        <li class="pb-2"><a href="#" class="white-font font-weight-bold primary-font footer-text">Writing Blog</a></li>
+                        <li class="pb-2"><a href="#" class="white-font font-weight-bold primary-font footer-text">Writing Wiki</a></li>
+                        <li class="pb-2"><a href="#" class="white-font font-weight-bold primary-font footer-text">Best Books</a></li>
+                        <li class="pb-2"><a href="#" class="white-font font-weight-bold primary-font footer-text">Best Notes</a></li>
+                        <li class="pb-2"><a href="#" class="white-font font-weight-bold primary-font footer-text">Famous Authors</a></li>
+                        <li class="pb-2"><a href="#" class="white-font font-weight-bold primary-font footer-text">Quotes</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <p class="third-color font-weight-bold">Best Writing</p>
+                    <ul class="footer-nav">
+                        <li class="pb-2"><a href="#" class="white-font font-weight-bold primary-font footer-text">About</a></li>
+                        <li class="pb-2"><a href="#" class="white-font font-weight-bold primary-font footer-text">Changelog</a></li>
+                        <li class="pb-2"><a href="#" class="white-font font-weight-bold primary-font footer-text">Terms & Condition</a></li>
+                        <li class="pb-2"><a href="#" class="white-font font-weight-bold primary-font footer-text">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-flex align-items-center justify-content-between copywrite-con">
+                <div>
+                    <p class="white-font">© 2020-2024 Best Writing. Born in 🇱🇹 Lithuania. Developed remotely from 🇩🇰 Denmark and 🇪🇸 Spain. Operating globally. 🌍</p>
+                </div>
+                <div class="social-icons">
+                    <i class="fa-brands fa-square-facebook white-font"></i>
+                    <i class="fa-brands fa-twitter white-font mx-3 "></i>
+                    <i class="fa-brands fa-instagram white-font"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end footer coading -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="popup">
+  <div class="modal-dialog" >
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1>Registration Form</h1>
+       </div>
+      <div class="modal-body">
+
+            <div class="tab-content pt-3" style="overflow: hidden;">
+            <div>
+                
+            <form class="row">
+
+                <div class="fullname col-md-6 form-group">
+                                        <label>Firstname</label>
+
+                    <input type="firstname" name="firstname" class="form-control input-color" required>
+
+                </div>
+                <div class="fullname col-md-6 form-group">
+                                        <label>Lastname</label>
+
+                    <input type="lastname" name="lastname" class="form-control input-color" required>
+
+                </div>
+                <div class="fullname col-12 form-group">
+                    <label>Email</label>
+
+                    <input type="email" name="email" class="form-control input-color" required>
+
+                </div>
+                <div class="fullname col-12 form-group">
+                    <label>Mobile No.</label>
+
+                    <input type="text" data-parsley-type="number"    name="mobileno" class="form-control input-color" required>
+
+                </div>
+                <div class=" fullname col-md-6 form-group ">
+                    <label>Password</label>
+                    <input type="password" name="password" id="password" class="form-control input-color" minlength="6" maxlength="18" required>
+                </div>
+                <div class="fullname col-md-6 form-group">
+                    <label>Re-enter Password</label>
+                    <input type="password" name="password" class="form-control input-color" data-parsley-equalto="#password" data-parsley-error-message="password must be matched"  required>
+                </div>
+                <!-- <div class="form-check form-switch float-left">
+                    <input type="checkbox" class="form-check-input" id="rem-check"><label class="form-check-label" for="rem-check">Remember me</label>
+                </div> -->
+                 <div class="modal-footer w-100 justify-content-center">
+                    <p class="ajax-status"></p>
+        <button class="btn bg-primary" type="submit" >login</button>
+      </div>
+                
+            </form>             
+            </div>
+        </div>
+      </div>
+     
+    </div>
+  </div>
+</div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.1/mustache.min.js" ></script>
+    <script src="js/custom.js"></script>
+
+
+    <script>
+        $(document).ready(function(){
+            $(".sign_up_button").on("click",function(){
+                $('#popup').modal('show')
+            });
+            
+            $('form').parsley();
+
+            $("form").on("submit",function(e){
+                e.preventDefault();
+                if($(this).parsley().isValid()){
+                    $.ajax({
+                        type:"POST",
+                        url:"data.php",
+                        data:$(this).serialize(),
+                        dataType:'json',
+                    }).done(function(data){
+                        alert(typeof data);
+                        //data =  JSON.parse(data);
+                        if(data.hasOwnProperty("success")){
+                            $(".ajax-status").css("color","green").html("Your form submit successfully!");
+                        }
+                        else{
+                            $(".ajax-status").css("color","red").html("Please try later!");
+
+                        }
+                    }).fail(function(xhr,status){
+                        console.log(status);
+                        console.log(xhr);
+                        $(".ajax-status").css("color","red").html("Please try later!");
+                    });
+
+                }
+            })
+
+
+        })
+
+
+    </script>
+</body>
+
+</html>

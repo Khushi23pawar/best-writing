@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jobs page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,200;9..40,300;9..40,400&family=DM+Serif+Display:ital@0;1&family=Roboto:wght@300;400&family=Poppins:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link rel="stylesheet" type="text/css" href="style/responsive.css">
+</head>
+
+<body>
+	<!-- start navbar coading -->
+    <nav class="navbar navbar-expand-lg  navbar-light top-menu fixed-top ">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-slider"><span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- bar and close icon -->
+        <div class="logo-container">
+            <a href="https://bestwriting.com" class="navbar-brand logo-desktop d-none d-md-none d-lg-block
+"><img src="images/bw-logo-primary-long.svg" alt="logo" class="img-fluid logo-img"></a>
+            <a href="https://bestwriting.com" class="navbar-brand logo-mobile d-md-block d-lg-none
+"><img src="images/bw-logo-mark-primary.svg" alt="logo" class="img-fluid logo-img"></a>
+            <button type="button" class="btn sec-font sec-color nav-font d-block d-lg-none">Sign Up </button>
+        </div>
+        <div class="collapse navbar-collapse" id="nav-slider">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a href="job.html" class="nav-link">Jobs</a></li>
+                <li class="nav-item"><a href="membership.html" class="nav-link">Membership</a></li>
+                <li class="nav-item"><a href="newsletter.html" class="nav-link">Newsletter</a></li>
+                <li class="nav-item"><a href="writer.html" class="nav-link">Writes</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
+            </ul>
+        </div>
+        <button type="button" class="btn sec-font sec-color nav-font d-none d-lg-block">Sign Up</button>
+    </nav>
+    <!-- end navbar coading -->
+    <!-- start jobs section -->
+    <div class="jumbotron bg-light mb-0 job-page-con">
+        <div>
+            <div class="d-flex align-items-center justify-content-between main-con">
+                <h1 class="third-font heading-2">Latest Writing Jobs</h1>
+                <button class="primary-bg browser-btn-1"><i class="fa fa-pencil-square pr-2"></i>Post a Job</button>
+            </div>
+            <form class="position-relative pt-3">
+                <div class="form-group input-con">
+                    <input type="search" name="search" class="form-control email-input" placeholder="Search" required><i class="fas fa-search search-icon"></i>
+                </div>
+            </form>
+        </div>
+         <div class="update-job-container" id="job-template-box"></div>
+            <script type="text/html" id="job-template">
+            {{#arr}}
+            <div class="row align-items-center justify-content-center job-inner-con position-relative">
+                <div class="col-md-1 ">
+                    <div class=" job-img-con">
+                        <img src="{{logo}}" alt="simply business">
+                    </div>
+                </div>
+                <div class="col-md-10 ">
+                    <h5 class="third-font">{{heading}}</h5>
+                    <p class="sec-color mb-0 job-dec"><span class="font-weight-bold">{{typeofjob}}</span>
+                        <span class="px-3">{{timing}}</span>
+                        <span><i class="fa fa-map-marker pr-1"></i>{{location}}</span></p>
+                </div>
+                <div class="col-md-1 today-text-cl" style="position: initial !important;">
+                    <p class="mb-0 text-uppercase primary-color sec-bg primary-font best-paratext job-posting-date">{{posttime}}</p>
+                    <div class="job-extra-btn">
+                        <button class="btn apply-btn"><a style="color:#000" href="{{applylink}}">Apply</a><span class="fa fa-external-link pl-2"></span></button>
+                        <button class="primary-bg browser-btn-1"><a style="color:#fff" href="{{joblink}}">View Job</a></button>
+                    </div>
+                </div>
+            </div>
+            {{/arr}}
+            
+        </script>
+        </div>
+        <div class="text-center">
+        <button class="primary-bg browser-btn-1 btn-2 ">Show More Jobs</button>
+    </div>
+    </div>
+    <!-- end jobs section -->
+    <!-- start footer coading -->
+    <footer class="jumbotron-fluid discover-jumbo  primary-bg m-0 pt-5">
+        <div class="container-fluid writing-job-container rightleft_space pt-0">
+            <div class="row">
+                <div class="col-12 col-lg-4">
+                    <div><img src="images/bw-logo-white-long.svg" alt="logo" class="img-fluid logo-img founder-logo-img">
+                    </div>
+                    <p class=" footer-size third-color pt-4">Best Writing is an all-in-one platform <br>connecting writers with businesses. Find the best writing jobs in one place and hire writers.</p>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <p class="third-color font-weight-bold">For Writer</p>
+                    <ul class="footer-nav">
+                        <li class="pb-2"><a href="#" class="white-font font-weight-bold primary-font footer-text">Find a Job</a></li>
+                        <li class="pb-2"><a href="#" class="white-font font-weight-bold primary-font footer-text">Weekly Newsletter</a></li>
+                        <li class="pb-2"><a href="#" class="white-font font-weight-bold primary-font footer-text">Writer Membership</a></li>
+                        <li class="pb-2"><a href="#" class="white-font font-weight-bold primary-font footer-text">Writer Application</a></li>
+                        <li class="pb-2"><a href="#" class="white-font font-weight-bold primary-font footer-text">Reviews <span class="new-span primary-font"> NEW </span></a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <p class="third-color font-weight-bold">For Business</p>
+                    <ul class="footer-nav">
+                        <li class="pb-2"><a href="#" class="white-font font-weight-bold primary-font footer-text">Post a Job</a></li>
+                        <li class="pb-2"><a href="#" class="white-font font-weight-bold primary-font footer-text">Find a Writer</a></li>
+                        <li class="pb-2"><a href="#" class="white-font font-weight-bold primary-font footer-text">Sponser Newsletter </a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <p class="third-color font-weight-bold">Resources</p>
+                    <ul class="footer-nav">
+                        <li class="pb-2"><a href="#" class="white-font font-weight-bold primary-font footer-text">Writing Blog</a></li>
+                        <li class="pb-2"><a href="#" class="white-font font-weight-bold primary-font footer-text">Writing Wiki</a></li>
+                        <li class="pb-2"><a href="#" class="white-font font-weight-bold primary-font footer-text">Best Books</a></li>
+                        <li class="pb-2"><a href="#" class="white-font font-weight-bold primary-font footer-text">Best Notes</a></li>
+                        <li class="pb-2"><a href="#" class="white-font font-weight-bold primary-font footer-text">Famous Authors</a></li>
+                        <li class="pb-2"><a href="#" class="white-font font-weight-bold primary-font footer-text">Quotes</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <p class="third-color font-weight-bold">Best Writing</p>
+                    <ul class="footer-nav">
+                        <li class="pb-2"><a href="#" class="white-font font-weight-bold primary-font footer-text">About</a></li>
+                        <li class="pb-2"><a href="#" class="white-font font-weight-bold primary-font footer-text">Changelog</a></li>
+                        <li class="pb-2"><a href="#" class="white-font font-weight-bold primary-font footer-text">Terms & Condition</a></li>
+                        <li class="pb-2"><a href="#" class="white-font font-weight-bold primary-font footer-text">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-flex align-items-center justify-content-between copywrite-con">
+                <div>
+                    <p class="white-font">© 2020-2024 Best Writing. Born in 🇱🇹 Lithuania. Developed remotely from 🇩🇰 Denmark and 🇪🇸 Spain. Operating globally. 🌍</p>
+                </div>
+                <div class="social-icons">
+                    <i class="fa-brands fa-square-facebook white-font"></i>
+                    <i class="fa-brands fa-twitter white-font mx-3 "></i>
+                    <i class="fa-brands fa-instagram white-font"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end footer coading -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.1/mustache.min.js" ></script>
+    <script src="js/custom.js"></script>
+    <script>
+    </script>
+</body>
+
+</html>

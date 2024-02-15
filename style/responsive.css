@@ -1,0 +1,322 @@
+@media(min-width:1440px) {}
+
+@media(max-width:1440px) {}
+
+@media(max-width:1200px) {
+    .main-con-right img {
+        height: 80vh
+    }
+}
+
+@media(max-width:1024px) {
+    .job-inner-con .col-md-10 {
+        padding-left: 40px;
+    }
+
+    .today-text-cl {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+    }
+
+    .signup-free-con {
+        width: 85%;
+        font-size: 19px
+    }
+
+    .copywrite-con {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
+
+@media(max-width:991px) {
+    .logo-container {
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .heading-1 {
+        font-size: 2.5rem
+    }
+
+    .main-con-left-inner h1 {
+        line-height: 45px
+    }
+
+    .main-con-left-inner {
+        bottom: 30px;
+    }
+
+    .job-inner-con .col-md-10 {
+        padding-left: 60px;
+    }
+
+    .protfolio-img {
+        border-radius: 15px 15px 0px 0px;
+        max-width: 100%
+    }
+
+    .protfolio-content {
+        bottom: initial;
+        padding-top: 60px
+    }
+
+    .protfolio_con {
+        flex-direction: column-reverse;
+        padding-top: 0
+    }
+
+    .footer-size {
+        padding-bottom: 40px
+    }
+}
+
+@media(max-width:767px) {
+    .main-con-right {
+        display: none;
+    }
+
+    .main-con-left-inner {
+        text-align: center;
+        padding: 50px;
+        position: initial;
+    }
+
+    .job-inner-con .col-md-10 {
+        padding-left: 15px;
+        padding-top: 20px;
+    }
+
+    .job-inner-con .job-dec {
+        padding-top: 0;
+    }
+
+    .today-text-cl {
+        justify-content: start
+    }
+
+    .job-extra-btn {
+        top: 25%
+    }
+
+    .protfolio_con {
+        padding-bottom: 0px;
+    }
+
+    .signup-free-con {
+        width: 100%;
+        font-size: 15px;
+    }
+
+/* newsletter page responsive   */
+    .sendme-form{width: 50%}
+
+/*membership page responsive*/
+.membership-con{padding-left: 50px; padding-right: 50px}
+.membership-list li{font-size: 15px;}
+.membership-list{ padding-left: 0.2rem !important}
+.membership-plan-con button{font-size: 15px; text-wrap:nowrap;}
+.membership-plan{flex-direction: column;}
+.membership-plan-con{ padding: 15px !important;}
+}
+
+@media(max-width:576px) {
+    .rightleft_space {
+        padding: 30px;
+    }
+
+    .writing-job-con-inner {
+        padding: 1rem !important;
+    }
+
+    .browser-btn-2 {
+        margin-top: 15px;
+    }
+
+    .protfolio-content h1 {
+        font-size: 1.8rem;
+        line-height: 32px;
+    }
+
+    .main-con-left-text {
+        font-size: 16px;
+        padding: 15px 0;
+    }
+
+    .news-adjust {
+        padding-right: 0px !important;
+    }
+
+    .review-box {
+        padding: 15px 25px;
+        width: 100%;
+        height: auto;
+    }
+
+    .footer-text {
+        font-size: 15px
+    }
+/*  newsletter page responsive   */
+    .sendme-form{width: 70%}
+
+
+}
+
+@media(max-width:480px) {
+    .logo-container {
+        width: 55%;
+
+    }
+
+    .heading-2 {
+        font-size: 1.8rem;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .job-img-con,
+    .job-img-con img {
+        width: 60px;
+        height: 60px
+    }
+
+    .btn,
+    .browser-btn-1 {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    .job-extra-btn {
+        top: 20%
+    }
+
+    .protfolio {
+        padding: 30px
+    }
+
+    .best-paratext {
+        font-size: 11px
+    }
+
+    .signup-free-con {
+        flex-direction: column;
+        font-size: 13px
+    }
+
+    .signup-free-con p {
+        font-size: 16px;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    .signup-free-con .btn {
+        width: 100%
+    }
+
+    .founder-con-inner {
+        padding: 20px
+    }
+
+    .founder-con-inner p {
+        text-align: justify;
+    }
+
+    .writer-con .writer-image {
+        height: 60px;
+    }
+
+    .founder-logo-first-div {
+        width: 100%
+    }
+
+    .founder-logo-img {
+        display: none;
+    }
+
+    .review-box {
+        margin: 0px;
+        margin-bottom: 20px;
+    }
+
+    .writing-job-inner-con {
+        padding-bottom: 0px !important;
+    }
+
+    footer .founder-logo-img {
+        display: block !important
+    }
+
+    .copywrite-con p {
+        font-size: 12px
+    }
+    /*  newsletter page responsive   */
+    .sendme-form{width: 90%}
+
+
+}
+
+@media(max-width:420px) {
+    .main-con-left-inner {
+        padding: 40px 20px
+    }
+
+    /*   job page */
+    .job-page-con .main-con{flex-direction: column;}
+}
+
+@media(max-width:375px) {
+    .heading-1 {
+        font-size: 2rem;
+    }
+
+    .subscribe-btn {
+        font-size: 16px;
+    }
+
+    .main-con-left-text {
+        font-size: 16px;
+    }
+
+    .main-con-left-inner {
+        padding: 30px;
+    }
+
+    .apply-btn,
+    .browser-btn-1 {
+        font-size: 12px;
+        margin-right: 5px;
+    }
+
+    .btn-2 {
+        margin: auto
+    }
+
+    .best-paratext {
+        text-wrap: nowrap;
+        font-size: 9px;
+    }
+
+    .input-btn {
+        font-size: 10px;
+        padding: 10px 10px;
+    }
+
+    .email-input {
+        height: 35px;
+        margin-right: 1px;
+    }
+
+    .newsletter-jumbo h2 {
+        font-size: 25px;
+    }
+
+    .writing-job-inner-con {
+        padding: 15px !important
+    }
+
+
+
+}
