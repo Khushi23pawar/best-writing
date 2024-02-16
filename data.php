@@ -1,5 +1,5 @@
 <?php
 
-	echo "dummy.php";
+	echo "random.php";
 
 ?>
