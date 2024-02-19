@@ -13,27 +13,7 @@
     <link rel="stylesheet" type="text/css" href="style/responsive.css">
     <style>
 
-        .modal-content{
-
-         border: 1px solid #000;
-         text-align: center;
-         background: #000;
-         color: white;
-        }
-        .parsley-errors-list {
-                list-style: none;
-    color: red;
-    text-align: left;
-    padding: 0px;
-
-        }
-        .fullname{
-            text-align: justify;
-        }
-        .input-color{
-        background: #1A1A1E;
-    border: 1px solid #1A1A1E;
-        }
+       
     </style>
 </head>
 
@@ -497,12 +477,10 @@
                     <label>Re-enter Password</label>
                     <input type="password" name="password" class="form-control input-color" data-parsley-equalto="#password" data-parsley-error-message="password must be matched"  required>
                 </div>
-                <!-- <div class="form-check form-switch float-left">
-                    <input type="checkbox" class="form-check-input" id="rem-check"><label class="form-check-label" for="rem-check">Remember me</label>
-                </div> -->
-                 <div class="modal-footer w-100 justify-content-center">
+               
+                 <div class="modal-footer w-100 d-block">
                     <p class="ajax-status"></p>
-        <button class="btn bg-primary" type="submit" >login</button>
+        <button class="btn primary-bg third-color" type="submit" >login</button>
       </div>
                 
             </form>             
@@ -542,7 +520,6 @@
                         data:$(this).serialize(),
                         dataType:'json',
                     }).done(function(data){
-                        alert(typeof data);
                         //data =  JSON.parse(data);
                         if(data.hasOwnProperty("success")){
                             $(".ajax-status").css("color","green").html("Your form submit successfully!");

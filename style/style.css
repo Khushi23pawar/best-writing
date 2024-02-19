@@ -35,7 +35,7 @@ html {
 }
 
 .primary-bg {
-    background-color: #01413F;
+    background-color: #01413F !important;
 }
 
 .sec-bg {
@@ -666,8 +666,33 @@ button {
 .news-page-text{font-size: 12px!important;}
 .news-page-btn{margin: 15px auto !important;}
 
+/* modal popup start */
 
+#popup .modal-content{
 
+    border-radius: 15px;
+    text-align: center;
+    
+    background-color: #fff ;
+    color: #000;
+    
+   }
+    .modal-header{
+    
+     justify-content: center;
+   }
+  
+   .parsley-errors-list {
+           list-style: none;
+color: red;
+text-align: left;
+padding: 0px;
+
+   }
+   .fullname{
+       text-align: justify;
+   }
+   
 
 
 
